@@ -1,30 +1,30 @@
 import React from 'react';
+import  narutoultimate from "../assets/narutoultimate.png"
 
-const Main = ({ pokemon }) => {
-    return (
-        <main className='pokemon'>
-            { pokemon ? 
-                <div>
-                    <h2>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
-                    <h3>ID: {pokemon.id}</h3>
-                    <h3>Type: {pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1)}</h3>
+const Main = () => {
+  
+  const animeData = {
+    name: 'Anime Name',
+    id: 'Anime ID',
+    type: 'Anime Type',
+    image: narutoultimate,
+  };
 
-                    <img
-                    className="sprite"
-                    src={pokemon.sprites.front_default}
-                    />
-                </div> 
-                : 
-                <div className="img-container">
-                    <img 
-                    className="poke-gif"
-                    src={pokeGIF} 
-                    />
-                </div>
-            
-            }
-        </main>
-    );
+  return (
+    <main className='anime'>
+      <div>
+        <h2>{animeData.name}</h2>
+        <h3>ID: {animeData.id}</h3>
+        <h3>Type: {animeData.type}</h3>
+
+        <img
+          className="anime2"
+          src={animeData.image}
+          alt=" narutoAnime"
+        />
+      </div>
+    </main>
+  );
 };
 
 export default Main;

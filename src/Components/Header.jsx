@@ -1,11 +1,11 @@
 import React from 'react';
-import pokemonLogo from '../assets/pokemon-logo.png'
+import allanime from "../assets/allanime.png"
 
 const Header = () => {
     return (
         <header>
             <img className="logo"
-            src={AnimeLogo} alt="Anime Logo"/>
+            src={allanime} alt="allanime"/>
         </header>
     );
 };
