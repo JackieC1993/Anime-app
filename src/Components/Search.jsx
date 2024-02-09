@@ -14,7 +14,7 @@ const Search = ({ setAnime }) => {
       .then((res) => res.json())
       .then((res) => {
         setAnimeInput('');
-        setAnime(res); // Assuming setAnime is a prop callback to update state in a parent component
+        setAnime(res[0]); // Assuming setAnime is a prop callback to update state in a parent component
         console.log(res);
       })
       .catch((error) => {
@@ -32,8 +32,8 @@ const Search = ({ setAnime }) => {
           placeholder="Anime show"
         />
         <button type="submit">
-          <img
-            src="https://via.placeholder.com/50" // Placeholder image, replace with actual image source
+          <img 
+            src="https://via.placeholder.com/50"// Placeholder image, replace with actual image source
             alt="Anime Button"
             className="anime-button"
           />
